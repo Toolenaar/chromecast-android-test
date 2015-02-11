@@ -1,8 +1,8 @@
 package com.jtms.chromecasttest;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.MediaRouteActionProvider;
 import android.support.v7.media.MediaRouteSelector;
@@ -22,8 +22,9 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.google.android.gms.common.images.WebImage;
 import com.jtms.chromecasttest.channels.BasicChannel;
+import com.jtms.chromecasttest.musicPlayer.TrackMediaInfo;
+import com.jtms.chromecasttest.view.MainActivity;
 
 import java.io.IOException;
 
@@ -71,6 +72,7 @@ public class ChromeCastController {
                 .addControlCategory(CastMediaControlIntent.categoryForCast(appId))
                 .build();
     }
+
 
     /**
      * hooks up the actionbar item to the media provider
